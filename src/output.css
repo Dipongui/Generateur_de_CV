@@ -436,9 +436,6 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-px {
-    height: 1px;
-  }
   .h-screen {
     height: 100vh;
   }
@@ -451,17 +448,8 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
-  }
-  .w-\[0\%\] {
-    width: 0%;
-  }
-  .w-\[9\] {
-    width: 9;
   }
   .w-\[30\%\] {
     width: 30%;
@@ -469,20 +457,8 @@
   .w-\[80\%\] {
     width: 80%;
   }
-  .w-\[80\] {
-    width: 80;
-  }
   .w-\[98\%\] {
     width: 98%;
-  }
-  .w-\[98\] {
-    width: 98;
-  }
-  .w-\[500\%\] {
-    width: 500%;
-  }
-  .w-\[500\] {
-    width: 500;
   }
   .w-full {
     width: 100%;
