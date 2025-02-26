@@ -10,10 +10,13 @@
     --color-amber-500: oklch(0.769 0.188 70.08);
     --color-amber-600: oklch(0.666 0.179 58.318);
     --color-amber-800: oklch(0.473 0.137 46.201);
+    --color-purple-900: oklch(0.381 0.176 304.987);
+    --color-stone-200: oklch(0.923 0.003 48.717);
     --spacing: 0.25rem;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-bold: 700;
+    --radius-3xl: 1.5rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -436,9 +439,6 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-px {
-    height: 1px;
-  }
   .h-screen {
     height: 100vh;
   }
@@ -457,32 +457,44 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+  .w-\[\%\] {
+    width: %;
+  }
   .w-\[0\%\] {
     width: 0%;
   }
-  .w-\[9\] {
-    width: 9;
+  .w-\[3\%\] {
+    width: 3%;
+  }
+  .w-\[8\%\] {
+    width: 8%;
   }
   .w-\[30\%\] {
     width: 30%;
   }
+  .w-\[35\%\] {
+    width: 35%;
+  }
+  .w-\[40\%\] {
+    width: 40%;
+  }
+  .w-\[70\%\] {
+    width: 70%;
+  }
+  .w-\[75\%\] {
+    width: 75%;
+  }
   .w-\[80\%\] {
     width: 80%;
   }
-  .w-\[80\] {
-    width: 80;
+  .w-\[90\%\] {
+    width: 90%;
   }
   .w-\[98\%\] {
     width: 98%;
   }
-  .w-\[98\] {
-    width: 98;
-  }
-  .w-\[500\%\] {
-    width: 500%;
-  }
-  .w-\[500\] {
-    width: 500;
+  .w-\[100\%\] {
+    width: 100%;
   }
   .w-full {
     width: 100%;
@@ -876,6 +888,12 @@
   .justify-items-stretch {
     justify-items: stretch;
   }
+  .gap-0 {
+    gap: calc(var(--spacing) * 0);
+  }
+  .gap-0\.5 {
+    gap: calc(var(--spacing) * 0.5);
+  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
@@ -1018,6 +1036,9 @@
   .rounded-bl {
     border-bottom-left-radius: 0.25rem;
   }
+  .rounded-bl-3xl {
+    border-bottom-left-radius: var(--radius-3xl);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -1102,6 +1123,9 @@
   .bg-amber-800 {
     background-color: var(--color-amber-800);
   }
+  .bg-purple-900 {
+    background-color: var(--color-purple-900);
+  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -1110,6 +1134,9 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
+  }
+  .bg-stone-200 {
+    background-color: var(--color-stone-200);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
