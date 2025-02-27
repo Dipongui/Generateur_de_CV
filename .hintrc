@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-webkit-text-size-adjust",
+          "color: color-mix(in oklab, currentColor 50%, transparent)",
+          "container-type",
+          "container-type: inline-size",
+          "float: inline-start",
+          "float: inline-end",
+          "clear: inline-start",
+          "clear: inline-end",
+          "field-sizing",
+          "field-sizing: fixed",
+          "grid-template-rows: subgrid",
+          "background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent)",
+          "text-wrap",
+          "field-sizing: content",
+          "grid-template-columns: subgrid",
+          "text-wrap: balance",
+          "text-wrap: pretty",
+          "text-wrap: wrap",
+          "color: color-mix(in oklab, red 50%, transparent)",
+          "mix-blend-mode: plus-darker",
+          "mix-blend-mode: plus-lighter",
+          "text-wrap: nowrap"
+        ]
+      }
+    ],
+    "axe/text-alternatives": [
+      "default",
+      {
+        "document-title": "off"
+      }
+    ],
+    "axe/language": [
+      "default",
+      {
+        "html-has-lang": "off"
+      }
+    ]
+  }
+}
