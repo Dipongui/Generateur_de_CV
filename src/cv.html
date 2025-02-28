@@ -14,161 +14,173 @@
   </head>
   
   <body class="w-full flex mt-10">
-    <section id="MIREILLLE" class="w-[35%] bg-stone-200">
+    <script src="cv.js"></script>
+    <section id="MIREILLLE" class="w-[35%] bg-stone-950 pl-0.5">
       <!--section pour la partie en violet-->
       <!----div container 1pour la premiére section respect des marges de 2,5% de chaque coté donc utilisation de 95% des 35%-->
-      <div class="w-[95%] ml-2.5" id="container">
-        <section
-          class="w-[100%] bg-gradient-to-r from-purple-900 to-stone-950 rounded-bl-[1000px]"
-          id="entete"
-        >
+      <div class="w-[95%] ml-2.5  bg-stone-200" id="container">
+        <section class="w-[100%] bg-gradient-to-r from-purple-900 to-stone-950 rounded-bl-[1000px]" id="entete">
           <!----div container 1pour la section entete-->
           <div class="">
-            <div>
+            <div >
               <div>
                 <img src="Edit CV.png" alt="" class="w-[100px] ml-10" />
+                
               </div>
               <div class="flex justify-center items-center mt-10 gap-10">
                 <div
                   class="w-[150px] h-[150px] rounded-full bg-stone-200"
                 ></div>
                 <div
-                  class="font-serif border-2 border-stone-200 text-stone-200 text-3xl mb-30 p-2"
-                >
+                  class="font-serif border-2 border-stone-200 text-stone-200 text-3xl mb-30 p-2" id="nomEn">
                   Generate CV
                 </div>
               </div>
             </div>
+            <div>
+              <input type="file" id="tof" accept="image/*" onchange="image()">
+              <img src="" alt="" id="" >
+            </div>
           </div>
         </section>
         <!---section pour les informations personnelles-->
-        <section class="mt-20" id="exp_pro">
-          <div
-            class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline"
-            id="charmonman-regular"
-          >
+        <section class="mt-20 ml-7" id="exp_pro">
+          <div class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline" id="charmonman-regular" id="information_personnelles">
             Informations personnelles
           </div>
           <hr class="bg-purple-900 border-2 border-purple-900" />
-          <form action="" method="get" class="flex-colum ">
+          <form action="" method="get" class="flex-colum " id="form1">
             <div class="flex-col gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">Nom complet</label>
-              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-purple-900" id="Nom_complet" />
+              <label for="" class="text-2xl text-stone-900 font-serif" id="nomForm1">Nom complet</label>
+              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-purple-900" id="Nom_complet" required/>
               <span class="" id="err1"></span>
             </div>
             <div class="flex-col  gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">Age&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-              <input type="number" class="border border-stone-950 w-[400px] h-[50px] bg-gray-500" id="Age" />
+              <label for="" class="text-2xl text-stone-900 font-serif" id="ageForm1" >Age&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <input type="number" class="border border-stone-950 w-[400px] h-[50px] bg-gray-500" id="AgeForm1"required min="18" max="65"/>
               <span class="" id="err2"></span>
             </div>
             <div class=" flex-col  gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">Sexe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-              <input type="text" class="border border-stone-950 w-[400px] h-[50px] bg-purple-900"   h-[100px]id="sexe" />
+              <label for="" class="text-2xl text-stone-900 font-serif" id="sexeForm">Sexe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <input type="text" class="border border-stone-950 w-[400px] h-[50px] bg-purple-900" required  h-[100px]id="sexeForm1" />
               <span class="" id="err3"></span>
             </div>
             <div class="flex-col gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">Titre du Post</label>
-              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="Titre du post" />
+              <label for="" class="text-2xl text-stone-900 font-serif" id="titre_post">Titre du Post</label>
+              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="Titre_du_post" required/>
               <span class="" id="err4"></span>
             </div>
             <div class="flex-col gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">Situation actuelle </label>
-              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-purple-900" id="situation_actuelle" />
+              <label for="" class="text-2xl text-stone-900 font-serif" id="situationF">Situation actuelle </label>
+              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-purple-900" id="situation_actuelle" required/>
               <span class="" id="err5"></span>
             </div>
             <div class="flex-col gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="" value="">Description</label>
-              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="description" />
+              <label for="" class="text-2xl text-stone-900 font-serif" id="descriptionlabel" value="">Description</label>
+              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="descriptionForm1" required/>
               <span class="" id="err6"></span>
             </div>
+            <div id="btnAdd"></div>
             <div class="flex justify-center gap-25 mt-5" id="validmodif">
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900">Valider</button>
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500">Modifier</button>
+              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900" id="valider_personnelle" >Valider</button>
+              <button type="button" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500" id="modifier_personnelles" onclick="Ajouter()">Ajouter</button>
             </div>
           </form>
         </section>
         <!---section pour les coordonnées-->
-        <section class="mt-20" id="exp_pro">
+        <section class="mt-20 ml-7" id="exp_pro">
           <div class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline"id="charmonman-regular">
             Coordonnées
           </div>
           <hr class="bg-purple-900 border-2 border-purple-900" />
-          <form action="" method="get" class="flex-colum ">
+          <form action="" method="get" class="flex-colum " id="form2">
             <div class="flex-col gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">Adresse mail</label>
-              <input type="email" class="border border-stone-950 w-[400px]  h-[50px] bg-purple-900" id="Nom_complet" />
-              <span class="" id="err1"></span>
+              <label for="" class="text-2xl text-stone-900 font-serif" >Adresse mail</label>
+              <input type="email" class="border border-stone-950 w-[400px]  h-[50px] bg-purple-900" id="adresse" required/>
+              <span class="" id="err7"></span>
             </div>
             <div class="flex-col  gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">numéro de téléphone</label>
-              <input type="number" class="border border-stone-950 w-[400px] h-[50px] bg-gray-500" id="Age" />
-              <span class="" id="err2"></span>
+              <label for="" class="text-2xl text-stone-900 font-serif" >numéro de téléphone</label>
+              <input type="number" class="border border-stone-950 w-[400px] h-[50px] bg-gray-500" id="Num_tel" required/>
+              <span class="" id="err8"></span>
             </div>
             <div class=" flex-col  gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">Adresse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-              <input type="text" class="border border-stone-950 w-[400px] h-[50px] bg-purple-900"   h-[100px]id="sexe" />
-              <span class="" id="err3"></span>
+              <label for="" class="text-2xl text-stone-900 font-serif" >Adresse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <input type="text" class="border border-stone-950 w-[400px] h-[50px] bg-purple-900"    id="Adresse_domicile"   required/>
+              <span class="" id="err9"></span>
             </div>
+            <div id="btnAddC"></div>
             <div class="flex justify-center gap-25 mt-5" id="validmodif">
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900">Valider</button>
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500">Modifier</button>
+              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900" id="Valiser_coordonnées">Valider</button>
+              <button type="button" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500" id="modifier_coordonnées" onclick="AddCoordonnee()">Ajouter</button>
             </div>
           </form>
         </section>
         <!---section pour les compétences-->
-        <section class="mt-20" id="exp_pro">
+        <section class="mt-20 ml-7" id="exp_pro">
           <div class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline"id="charmonman-regular">
             Compétences
           </div>
           <hr class="bg-purple-900 border-2 border-purple-900" />
-          <form action="" method="get" class="flex-colum ">
+          <form action="" method="get" class="flex-colum " id="form3">
              
             <div class="flex-col  gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">Ajouter une compétences</label>
-              <input type="text" class="border border-stone-950 w-[400px] h-[50px] bg-gray-500" id="Age" />
-              <span class="" id="err2"></span>
+              <label for="" class="text-2xl text-stone-900 font-serif" >Ajouter une compétences</label>
+              <input type="text" class="border border-stone-950 w-[400px] h-[50px] bg-gray-500" id="jouter_competences" required/>
+              <span class="" id="err10"></span>
             </div>
             <div class="flex-col gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="" value="">Ajouter un niveau de compétences</label>
-              <input type="number" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="description" />
-              <span class="" id="err6"></span>
+              <label for="" class="text-2xl text-stone-900 font-serif"  value="">Ajouter un niveau de compétences</label>
+              <input type="number" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500"id="ajouter_niveau_competences" required/>
+              <span class="" id="err11"></span>
             </div>
             <div class="flex justify-center gap-25 mt-5" id="validmodif">
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900">Valider</button>
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500">Modifier</button>
+              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900" id="valider_competence">Valider</button>
+              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500" id="modifier_competence">Modifier</button>
             </div>
           </form>
         </section>
         <!--sectio pour la formation-->
-        <section class="mt-20" id="exp_pro">
+        <section class="mt-20 ml-7" id="exp_pro">
           <div class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline"id="charmonman-regular">
             Formation
           </div>
           <hr class="bg-purple-900 border-2 border-purple-900" />
-          <form action="" method="get" class="flex-colum ">
+          <form action="" method="get" class="flex-colum " id="form4">
             <div class="flex-col gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="" value="">ajouter une formation</label>
-              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="description" />
-              <span class="" id="err6"></span>
+              <label for="" class="text-2xl text-stone-900 font-serif"  value="" >Diplome Obtenue</label>
+              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="diplome_obtenu" required/>
+              <span class="" id="err12"></span>
             </div>
+            <div class="flex-col gap-2 mt-5">
+              <label for="" class="text-2xl text-stone-900 font-serif"  value="" >Etablissement</label>
+              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="etablissement" required/>
+              <span class="" id="err12"></span>
+            </div>
+            <div class="flex-col gap-2 mt-5">
+              <label for="" class="text-2xl text-stone-900 font-serif"  value="" >Année d'obtention</label>
+              <input type="date" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="annee_obtention" required/>
+              <span class="" id="err12"></span>
+            </div>
+            <div id="btnAddF"></div>
             <div class="flex justify-center gap-25 mt-5" id="validmodif">
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900">Valider</button>
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500">Modifier</button>
+              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900" id="valider_formation">Valider</button>
+              <button type="button" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500" id="modifier_formation" onclick="Addformation()">Ajouter</button>
             </div>
           </form>
         </section>
         <!--section pour les langues-->
-        <section class="mt-20" id="exp_pro">
+        <section class="mt-20 ml-7" id="exp_pro">
           <div class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline"id="charmonman-regular">
             Langues
           </div>
           <hr class="bg-purple-900 border-2 border-purple-900" />
-          <form action="" method="get" class="flex-colum ">
+          <form action="" method="get" class="flex-colum " id="form5">
            
             <div class="flex-col gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="" value="">ajouter une Langues</label>
-              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="description" />
-              <span class="" id="err6"></span>
+              <label for="" class="text-2xl text-stone-900 font-serif"  value="">ajouter une Langues</label>
+              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="Ajouter_langue" required/>
+              <span class="" id="err13"></span>
             </div>
             <div class="flex justify-center gap-25 mt-5" id="validmodif">
               <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900">Valider</button>
@@ -177,94 +189,195 @@
           </form>
         </section>
         <!---les expériences professionnelles-->
-        <section class="mt-20" id="exp_pro">
+        <section class="mt-20 ml-7" id="exp_pro">
           <div class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline"id="charmonman-regular">
             Expériences professionnelles
           </div>
           <hr class="bg-purple-900 border-2 border-purple-900" />
-          <form action="" method="get" class="flex-colum ">
+          <form action="" method="get" class="flex-colum " id="form6">
             <div class="flex-col  gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">Ajouter une date de debut d'expérience</label>
-              <input type="date" class="border border-stone-950 w-[400px] h-[50px] bg-gray-500" id="Age" />
-              <span class="" id="err2"></span>
+              <label for="" class="text-2xl text-stone-900 font-serif" >Ajouter une date de debut d'expérience</label>
+              <input type="date" class="border border-stone-950 w-[400px] h-[50px] bg-gray-500" id="debut_expérience" required/>
+              <span class="" id="err14"></span>
             </div>
             <div class=" flex-col  gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">ajouter une date de fin d'expériences</label>
-              <input type="date" class="border border-stone-950 w-[400px] h-[50px] bg-purple-900"   h-[100px]id="sexe" />
-              <span class="" id="err3"></span>
+              <label for="" class="text-2xl text-stone-900 font-serif"  >ajouter une date de fin d'expériences</label>
+              <input type="date" class="border border-stone-950 w-[400px] h-[50px] bg-purple-900"   id="fin_experience" required/>
+              <span class="" id="err15"></span>
             </div>
             <div class="flex-col gap-2 mt-5">
-              <label for="" class="text-2xl text-stone-900 font-serif" id="">Ajouter une expérience</label>
-              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="Titre du post" />
-              <span class="" id="err4"></span>
+              <label for="" class="text-2xl text-stone-900 font-serif">Ajouter une expérience</label>
+              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="ajouter_experience" required/>
+              <span class="" id="err16"></span>
             </div>
             <div class="flex justify-center gap-25 mt-5" id="validmodif">
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900">Valider</button>
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500">Modifier</button>
+              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900" id="valider_expérience">Valider</button>
+              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500" id="modifier_exêrience">Modifier</button>
             </div>
           </form>
         </section>
         <!---section pour les centres d'intérets-->
-        <section class="mt-20" id="exp_pro">
+        <section class="mt-20 ml-7" id="exp_pro">
           <div class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline"id="charmonman-regular">
             Centre d'interets
           </div>
           <hr class="bg-purple-900 border-2 border-purple-900" />
-          <form action="" method="get" class="flex-colum ">
+          <form action="" method="get" class="flex-colum " id="form7">
            
             <div class="flex-col gap-2 mt-5">
               <label for="" class="text-2xl text-stone-900 font-serif" id="" value="">ajouter un Centre d'interets</label>
-              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="description" />
-              <span class="" id="err6"></span>
+              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="centre_d'interets" required/>
+              <span class="" id="err17"></span>
             </div>
             <div class="flex justify-center gap-25 mt-5" id="validmodif">
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900">Valider</button>
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500">Modifier</button>
+              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900" id="valider_centre_d'interets">Valider</button>
+              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500" id="modifier_centre_d'interet">Modifier</button>
             </div>
           </form>
         </section>
         <!----section pour les references-->
-        <section class="mt-20" id="exp_pro">
+        <section class="mt-20 ml-7" id="exp_pro">
           <div class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline"id="charmonman-regular">
             references
           </div>
           <hr class="bg-purple-900 border-2 border-purple-900" />
-          <form action="" method="get" class="flex-colum ">
+          <form action="" method="get" class="flex-colum " id="form8">
            
             <div class="flex-col gap-2 mt-5">
               <label for="" class="text-2xl text-stone-900 font-serif" id="" value="">ajouter une references</label>
-              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="description" />
-              <span class="" id="err6"></span>
+              <input type="text" class="border border-stone-950 w-[400px]  h-[50px] bg-gray-500" id="ajouter_reference" required/>
+              <span class="" id="err18"></span>
             </div>
             <div class="flex justify-center gap-25 mt-5" id="validmodif">
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900">Valider</button>
-              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500">Modifier</button>
+              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900" id="valider_reference">Valider</button>
+              <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500" id="modifier reference">Modifier</button>
             </div>
           </form>
         </section>
         <!----section pour les boutons de validations-->
-        <section class="mt-20" id="exp_pro">
+        <section class="mt-20 ml-7" id="exp_pro">
           <div class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline"id="charmonman-regular">
             Boutons de validations
           </div>
           <hr class="bg-purple-900 border-2 border-purple-900" />
-          <div class="flex justify-center gap-25 mt-5" id="validmodif">
-            <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900">VÉRIFIER CV</button>
-            <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500">RÉCUPÉRER LES DONNÉES DONNÉES</button>
-            <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-purple-900">GENERER LE CV</button>
-            <button type="submit" class="border border-stone-950 w-[100px]  h-[30px] bg-gray-500">EFFACER LE CV</button>
+          <div class=" mb-10 gap-10 flex-col">
+            <div class="flex justify-center gap-25 mt-5" id="validmodif">
+              <button type="submit" class="border border-stone-950 w-[200px]  h-[30px] bg-purple-900">VÉRIFIER CV</button>
+              <button type="submit" class="border border-stone-950 w-[200px]  h-[30px] bg-gray-500">RÉCUPÉRER LES DONNÉES </button>
+            </div>
+            <div class="flex justify-center gap-25 mt-5"> 
+              <button type="submit" class="border border-stone-950 w-[200px]  h-[30px] bg-purple-900">GENERER LE CV</button>
+              <button type="submit" class="border border-stone-950 w-[200px]  h-[30px] bg-gray-500">EFFACER LE CV</button>
+            </div>
+          </div>
         </section>
       </div>
     </section>
     <!---section pour le resultat-->
-    <section id="EDITH" class="w-[65%] bg-amber-500 flex justify-center">
-      <section class="w bg-amber-800" id="global">
-        <h1>Mireille</h1>
-        <h1>Mireille</h1>
-        <h1>Mireille</h1>
-        <h1>Mireille</h1>
-        <h1>Mireille</h1>
+  </section>
+  <section id="edith" class="w-[65%] bg-stone-900 shadow-lg pl-5 pr-5">
+    <section class=" bg-gray-500 ">
+      <section class="w-[100%] bg-gradient-to-r from-purple-900 to-stone-950 rounded-bl-[1000px]" id="entete">
+        <!----div container 1pour la section entete-->
+        <div class="">
+          <div>
+            <div class="flex  items-center gap-60">
+              <div
+                class="w-[250px] h-[250px] rounded-full bg-stone-200 ml-30 mt-10 " >
+                <img src="" alt="" id="vueImg" class="w-[250px] h-[250px] rounded-full">
+              </div>
+              <div class="font-serif border-2 border-stone-200 text-stone-200 text-3xl mb-30 p-2">
+                NOM PRENOM
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </section>
+   
+      <section class="flex">
+          <div class="w-1/2 bg-gray-500 px-4">
+              <div class="mt-10">
+                  <h1 class=" text-4xl text-stone-950 rtl:mr-100 flex items-baseline" id="charmonman-regular">Informations Personnelles</h1> 
+                  <div class=" border-purple-900  bg-purple-900 border-2"></div>
+                  <div class="flex-col  items-end  ">
+                      <span class="font-serif text-2xl tracking-widest leading-10 " id="nom"></span> <br>
+                      <span class="font-serif text-2xl tracking-widest leading-10 " id="age"></span> <br> 
+                      <span class="font-serif text-2xl tracking-widest leading-10 " id="sexe"></span> <br> 
+                      <span class="font-serif text-2xl tracking-widest leading-10 " id="poste"></span> <br>
+                      <span class="font-serif text-2xl tracking-widest leading-10 " id="situation"></span> <br> 
+                      <span class="font-serif text-2xl tracking-widest leading-10 " id="description"></span> <br>
+                      <div id="btAdd"></div>
+                  </div>
+              </div>
+              <div class="mt-10">
+                  <h1 class="  text-4xl text-stone-950 rtl:mr-100 flex items-baseline" id="charmonman-regular">Coordonnées</h1> 
+                  <div class=" border-purple-900  bg-purple-900 border-2"></div>
+                  <div class="mt-10">
+                      <span class="font-serif text-2xl tracking-widest leading-10" id="emailCordonne" id="charmonman-regular">emailcordonnees</span> <br> 
+                      <span class="font-serif text-2xl tracking-widest leading-10" id="numero">numéro</span> <br>
+                      <span class="font-serif text-2xl tracking-widest leading-10" id="adresseCordonnee">2037</span> <br>
+                      <div id="btAddC"></div>
+                  </div>
+              </div>
+              <div class="mt-10">
+                  <h1 class=" text-4xl text-stone-950 rtl:mr-100 flex items-baseline" id="charmonman-regular">Compétences</h1> 
+                  <div class=" border-purple-900  bg-purple-900 border-2"></div>
+                  <div>
+                      <span class="font-serif text-2xl tracking-widest leading-10" id="competence">Listes des Compétences</span> <br> 
+                      <span class="font-serif text-2xl tracking-widest leading-10" id="niveau">Niveau de compétence</span> 
+                  </div>
+              </div>
+              <div class="mt-10">
+                  <h1 class=" text-4xl text-stone-950 rtl:mr-100 flex items-baseline" id="charmonman-regular">Langues</h1> 
+                  <div class=" border-purple-900  bg-purple-900 border-2"></div>
+                  <div>
+                      <span class="font-serif text-2xl tracking-widest leading-10" id="langue">Langues maitrisées</span> <br> 
+                      <span class="font-serif text-2xl tracking-widest leading-10" id="niveauCompt">Niveau de competence</span> <br> 
+                  </div>
+              </div>
+          </div>
+          <div class="w-1/2 bg-stone-200 px-4 ">
+              <div class="mt-10">
+                  <h1 id="charmonman-regular" class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline">Expériences Professionnelles</h1> 
+                  <div class=" border-purple-900  bg-purple-900 border-2"></div>
+                  <div>
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="nomEntreprise"> <li class="md:list-inside ml-8">Manuela</li> </span> <br> 
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="posteOccupe"><li class="md:list-inside ml-8">Apprenante</li> </span> <br>
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="duree"> <li class="md:list-inside ml-8">Octobre</li> </span> <br>
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="description"> <li class="md:list-inside ml-8">RAS</li> </span> 
+                  </div>
+              </div>
+              <div class="mt-10">
+                  <h1 id="charmonman-regular" class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline">Centres d'intéret</h1> 
+                  <div class=" border-purple-900  bg-purple-900 border-2"></div>
+                  <div>
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="loisirs"> <li class="md:list-inside ml-8">foot</li> </span> <br> 
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="passion"> <li class="md:list-inside ml-8">jeux</li> </span> <br> 
+                  </div>
+              </div>
+              <div class="mt-10">
+                  <h1 id="charmonman-regular" class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline">Formations</h1>
+                  <div class=" border-purple-900  bg-purple-900 border-2"></div>
+                  <div>
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="diplome"> <li class="md:list-inside ml-8">Bac</li> </span> <br> 
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="ecole"> <li class="md:list-inside ml-8">LBBPP</li> </span> <br>
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="annee"> <li class="md:list-inside ml-8">2022</li> </span> <br> 
+                      <div id="btAddF"></div>
+                  </div>
+              </div>
+              <div class="mt-10">
+                  <h1 id="charmonman-regular" class="text-4xl text-stone-950 rtl:mr-100 flex items-baseline">Références</h1> 
+                  <div class=" border-purple-900  bg-purple-900 border-2"></div>
+                  <div>
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="nomRef"> <li class="md:list-inside ml-8">Manuela</li> </span> <br> 
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="posteRef"> <li class="md:list-inside ml-8">Apprenante</li> </span> <br>
+                      <span class="font-serif text-2xl tracking-widest leading-7 ml-10" id="contact"> <li class="md:list-inside ml-8">23737273</li> </span> <br>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </section>
+  
   </body>
 </html>
