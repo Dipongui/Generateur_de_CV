@@ -12,4 +12,11 @@
     font-weight: 700;
     font-style: normal;
   }
-  
+  .newspan{
+    font-family: 'Times New Roman', serif;
+    font-size: 27px;
+    color: black;
+    letter-spacing: 0.1;
+    margin-top: 10px;
+     
+  }

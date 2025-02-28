@@ -595,8 +595,11 @@
   .w-\[200px\] {
     width: 200px;
   }
-  .w-\[250px\] {
-    width: 250px;
+  .w-\[300px\] {
+    width: 300px;
+  }
+  .w-\[400p\] {
+    width: 400p;
   }
   .w-\[400px\] {
     width: 400px;
@@ -1858,6 +1861,21 @@
   }
   .scheme-only-light {
     color-scheme: only light;
+  }
+  .opacity-0 {
+    opacity: 0%;
+  }
+  .opacity-1 {
+    opacity: 1%;
+  }
+  .opacity-75 {
+    opacity: 75%;
+  }
+  .opacity-80 {
+    opacity: 80%;
+  }
+  .opacity-90 {
+    opacity: 90%;
   }
   .opacity-100 {
     opacity: 100%;
